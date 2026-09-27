@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Robin Michenka — Aerial</title>
+  <meta name="description" content="Portfolio dronových videí a fotografií. Letecké záběry pro reality, eventy, firmy a svatby.">
+  <meta property="og:title" content="Robin Michenka — Aerial">
+  <meta property="og:description" content="Portfolio dronových videí a fotografií.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rm.nmmnt.com/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- 01 Loader -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-mark">RM</div>
+  </div>
+
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="#top" class="brand" aria-label="Na začátek">RM<span>/aerial</span></a>
+      <nav class="nav-links" aria-label="Hlavní navigace">
+        <a href="#work">Práce</a>
+        <a href="#process">Postup</a>
+        <a href="#gear">Technika</a>
+        <a href="#pricing">Ceník</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a href="#contact" class="btn btn-lime btn-sm">Poptávka</a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- 02 Hero -->
+    <section class="hero">
+      <div class="hero-media">
+        <!-- Showreel: vlož MP4 do src, nebo HLS (.m3u8) do data-hls -->
+        <video id="hero-video" muted loop playsinline autoplay preload="metadata" data-hls=""></video>
+      </div>
+      <div class="hero-overlay"></div>
+      <canvas class="hero-dust" id="dust" aria-hidden="true"></canvas>
+      <div class="container hero-content">
+        <p class="eyebrow eyebrow-light reveal">AERIAL · FOTO · VIDEO · 2026</p>
+        <h1 class="hero-title reveal">
+          Svět vypadá jinak,<br>
+          <em>když se podíváte shora.</em>
+        </h1>
+        <p class="hero-sub reveal">Letecká videa a fotografie v 4K. Reality, eventy, firmy, krajina.</p>
+        <div class="hero-cta reveal">
+          <a href="#work" class="btn btn-lime">Prohlédnout práci →</a>
+          <a href="#process" class="btn btn-ghost">Jak spolupracujeme</a>
+        </div>
+      </div>
+      <a href="#work" class="scroll-hint" aria-label="Posunout na portfolio"><span></span></a>
+    </section>
+
+    <!-- 03 Bento -->
+    <section class="section" id="work">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">01 — Portfolio</p>
+          <h2 class="h1">Vybrané <em>lety</em></h2>
+        </div>
+        <div class="bento">
+          <article class="card card-featured reveal">
+            <div class="thumb" style="--g: linear-gradient(135deg,#1d3b2a,#5b7f3a 45%,#c9b458)"></div>
+            <div class="card-body">
+              <span class="tag tag-lime">Showreel</span>
+              <h3>Showreel 2026</h3>
+              <p>Výběr toho nejlepšího za poslední sezónu.</p>
+            </div>
+          </article>
+          <article class="card reveal">
+            <div class="thumb" style="--g: linear-gradient(160deg,#0b2233,#1f5f7a 55%,#9fd3d9)"></div>
+            <div class="card-body"><span class="tag">Video</span><h3>Pobřeží</h3><p>Krajina, pomalé průlety nad vodou.</p></div>
+          </article>
+          <article class="card reveal">
+            <div class="thumb" style="--g: linear-gradient(200deg,#2b2b2b,#6d6a64 50%,#d8cfc0)"></div>
+            <div class="card-body"><span class="tag">Foto</span><h3>Rodinný dům</h3><p>Realitní fotografie pozemku a okolí.</p></div>
+          </article>
+          <article class="card reveal">
+            <div class="thumb" style="--g: linear-gradient(180deg,#0e0f1c,#2e2a57 50%,#e08a4b)"></div>
+            <div class="card-body"><span class="tag">Video</span><h3>Město v noci</h3><p>Hyperlapse nad centrem.</p></div>
+          </article>
+          <article class="card reveal">
+            <div class="thumb" style="--g: linear-gradient(120deg,#3a2a14,#a0763a 50%,#f0d9a0)"></div>
+            <div class="card-body"><span class="tag">Foto</span><h3>Pole v létě</h3><p>Geometrie krajiny kolmo shora.</p></div>
+          </article>
+          <article class="card reveal">
+            <div class="thumb" style="--g: linear-gradient(150deg,#1a1a1a,#4b5a4a 55%,#b6c2a8)"></div>
+            <div class="card-body"><span class="tag">Video</span><h3>Svatba</h3><p>Letecké záběry místa obřadu.</p></div>
+          </article>
+          <article class="card reveal">
+            <div class="thumb" style="--g: linear-gradient(170deg,#1c2430,#56657a 50%,#e6e9ee)"></div>
+            <div class="card-body"><span class="tag">Video</span><h3>Hory v inverzi</h3><p>Východ slunce nad mlhou.</p></div>
+          </article>
+          <article class="card reveal">
+            <div class="thumb" style="--g: linear-gradient(140deg,#20262b,#3f5b6e 50%,#c7a27a)"></div>
+            <div class="card-body"><span class="tag">Foto + video</span><h3>Firemní areál</h3><p>Prezentace provozu a budov.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 How it works -->
+    <section class="section section-alt" id="process">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">02 — Postup</p>
+          <h2 class="h1">Od nápadu <em>k záběru</em></h2>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div class="step-text reveal">
+              <span class="step-num">01</span>
+              <h3 class="h2">Konzultace a plán letu</h3>
+              <p>Probereme, co má výsledek ukázat. Prověřím letové zóny, povolení a počasí a naplánuji trasu i denní dobu kvůli světlu.</p>
+            </div>
+            <div class="step-img reveal" style="--g: linear-gradient(135deg,#dfe7d6,#9fb58a)"></div>
+          </div>
+          <div class="step step-rev">
+            <div class="step-text reveal">
+              <span class="step-num">02</span>
+              <h3 class="h2">Natáčení</h3>
+              <p>Video v 4K s plynulými průlety a fotky v RAW. Na místě zvládnu i kombinaci s pozemními záběry.</p>
+            </div>
+            <div class="step-img reveal" style="--g: linear-gradient(135deg,#d6e1ea,#7f9bb3)"></div>
+          </div>
+          <div class="step">
+            <div class="step-text reveal">
+              <span class="step-num">03</span>
+              <h3 class="h2">Postprodukce</h3>
+              <p>Střih, color grading v DaVinci Resolve a úprava fotek. Výstupy připravím pro web, sociální sítě i velkoformátový tisk.</p>
+            </div>
+            <div class="step-img reveal" style="--g: linear-gradient(135deg,#ece2d4,#c2a27d)"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 Gear (místo testimonial wall — doplnit reference až budou) -->
+    <section class="section" id="gear">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">03 — Technika</p>
+          <h2 class="h1">S čím <em>létám</em></h2>
+        </div>
+        <div class="gear">
+          <div class="gear-item reveal"><span class="mono">DRON</span><strong>[doplnit model]</strong><p>Hlavní dron pro video a foto.</p></div>
+          <div class="gear-item reveal"><span class="mono">VIDEO</span><strong>4K · 10-bit</strong><p>Plochý profil pro color grading.</p></div>
+          <div class="gear-item reveal"><span class="mono">FOTO</span><strong>RAW · panoramata</strong><p>Včetně sférických 360° panoramat.</p></div>
+          <div class="gear-item reveal"><span class="mono">OPRÁVNĚNÍ</span><strong>[doplnit]</strong><p>Registrace provozovatele a pilotní zkouška.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 Pricing -->
+    <section class="section section-alt" id="pricing">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">04 — Ceník</p>
+          <h2 class="h1">Jednoduché <em>balíčky</em></h2>
+        </div>
+        <div class="pricing">
+          <div class="price-card reveal">
+            <p class="eyebrow">Foto</p>
+            <h3 class="h3">Letecké foto</h3>
+            <p class="price">od [cena] Kč</p>
+            <ul>
+              <li class="yes">10 upravených fotografií</li>
+              <li class="yes">Web + tiskové rozlišení</li>
+              <li class="yes">Dodání do 3 dnů</li>
+              <li class="no">Video</li>
+            </ul>
+            <a href="#contact" class="btn btn-ghost-dark">Poptat</a>
+          </div>
+          <div class="price-card price-featured reveal">
+            <p class="eyebrow">Nejčastější</p>
+            <h3 class="h3">Foto + video</h3>
+            <p class="price">od [cena] Kč</p>
+            <ul>
+              <li class="yes">20 upravených fotografií</li>
+              <li class="yes">Sestřih 60–90 s v 4K</li>
+              <li class="yes">Verze pro sociální sítě 9:16</li>
+              <li class="yes">Color grading</li>
+            </ul>
+            <a href="#contact" class="btn btn-lime">Poptat</a>
+          </div>
+          <div class="price-card reveal">
+            <p class="eyebrow">Na míru</p>
+            <h3 class="h3">Projekt</h3>
+            <p class="price">individuálně</p>
+            <ul>
+              <li class="yes">Vícedenní natáčení</li>
+              <li class="yes">Kombinace s pozemní kamerou</li>
+              <li class="yes">Surová data (RAW, LOG)</li>
+              <li class="yes">Licence pro reklamu</li>
+            </ul>
+            <a href="#contact" class="btn btn-ghost-dark">Domluvit se</a>
+          </div>
+        </div>
+        <p class="price-note mono">Ceny jsou bez cestovného mimo Olomouc. Finální cenu potvrdím po konzultaci.</p>
+      </div>
+    </section>
+
+    <!-- 07 FAQ -->
+    <section class="section" id="faq">
+      <div class="container container-narrow">
+        <div class="section-head reveal">
+          <p class="eyebrow">05 — FAQ</p>
+          <h2 class="h1">Časté <em>otázky</em></h2>
+        </div>
+        <div class="faq">
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">Můžete létat kdekoli?</button>
+            <div class="faq-a"><div><p>Ne. Část území je v řízených nebo omezených zónách (letiště, města, chráněná území). Před každým letem zónu prověřím a případně zařídím povolení. Kvůli tomu je dobré poptávat s předstihem.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">Co když bude špatné počasí?</button>
+            <div class="faq-a"><div><p>Při dešti, silném větru nebo mlze nelétám. Termín bez poplatku přesuneme na nejbližší vhodný den.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">Jak rychle dostanu výstupy?</button>
+            <div class="faq-a"><div><p>Fotky obvykle do 3 pracovních dnů, sestřih videa do 7 pracovních dnů. Expresní dodání je možné po domluvě.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">V jakém formátu výstupy dodáváte?</button>
+            <div class="faq-a"><div><p>Fotky jako JPEG ve vysokém rozlišení, video jako MP4 (H.264/H.265) v 4K. Na přání i surová data.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">Jezdíte i mimo Olomouc?</button>
+            <div class="faq-a"><div><p>Ano, po celé ČR i na Slovensko. Cestovné účtuji podle vzdálenosti.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">Máte pojištění?</button>
+            <div class="faq-a"><div><p>[doplnit — pojištění odpovědnosti provozovatele dronu]</p></div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">Co soukromí lidí na záběrech?</button>
+            <div class="faq-a"><div><p>Létám tak, aby záběry nezasahovaly do soukromí. Rozpoznatelné osoby ve výsledném materiálu nechávám jen se souhlasem, jinak je rozmažu nebo vystřihnu.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">Můžu záběry použít v reklamě?</button>
+            <div class="faq-a"><div><p>Ano, licenci pro komerční použití domluvíme podle rozsahu kampaně.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 Final CTA -->
+    <section class="cta" id="contact">
+      <div class="container cta-inner">
+        <p class="eyebrow reveal">06 — Kontakt</p>
+        <h2 class="display reveal">
+          Máte místo, které si zaslouží<br>
+          <em>pohled shora?</em>
+        </h2>
+        <a href="mailto:production@nmmnt.com?subject=Popt%C3%A1vka%20%E2%80%94%20dron" class="btn btn-lime btn-lg reveal">Napsat poptávku →</a>
+      </div>
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>AERIAL FILM · FOTO Z VÝŠKY · 4K · COLOR GRADING · AERIAL FILM · FOTO Z VÝŠKY · 4K · COLOR GRADING · </span>
+          <span>AERIAL FILM · FOTO Z VÝŠKY · 4K · COLOR GRADING · AERIAL FILM · FOTO Z VÝŠKY · 4K · COLOR GRADING · </span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 09 Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-brand">RM<em>/aerial</em></p>
+        <p class="muted">Dronová videa a fotografie.<br>Olomouc · ČR · SK</p>
+      </div>
+      <div>
+        <p class="eyebrow">Kontakt</p>
+        <a href="mailto:production@nmmnt.com">production@nmmnt.com</a>
+      </div>
+      <div>
+        <p class="eyebrow">Jinde</p>
+        <a href="https://nmmnt.com">nmmnt.com</a><br>
+        <a href="https://atelier55.nmmnt.com">Ateliér55</a><br>
+        <a href="#">Instagram [doplnit]</a>
+      </div>
+    </div>
+    <div class="container footer-bottom mono">© 2026 Robin Michenka</div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
