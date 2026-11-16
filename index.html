@@ -3,18 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Robin Michenka — Aerial</title>
-  <meta name="description" content="Portfolio dronových videí a fotografií. Letecké záběry pro reality, eventy, firmy a svatby.">
-  <meta property="og:title" content="Robin Michenka — Aerial">
-  <meta property="og:description" content="Portfolio dronových videí a fotografií.">
+  <title>Robin Michenka — Video a foto nemovitostí: dron, FPV průlety, kamera</title>
+  <meta name="description" content="Video a fotografie nemovitostí pro realitní makléře, developery a firmy. Dron, FPV průlety interiérem, kamera Sony FX3, foto interiéru, virtuální prohlídky a AI vizualizace. Olomouc a celá ČR.">
+  <meta property="og:title" content="Robin Michenka — Video a foto nemovitostí">
+  <meta property="og:description" content="Dron, FPV průlety interiérem, kamera, foto interiéru, virtuální prohlídky a AI vizualizace pro reality a firmy.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://rm.nmmnt.com/">
+  <meta property="og:image" content="https://rm.nmmnt.com/media/thumbs/samotisky.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=4">
 </head>
 <body>
 
@@ -27,9 +28,9 @@
     <div class="container nav-inner">
       <a href="#top" class="brand" aria-label="Robin Michenka — na začátek"><span class="logo" aria-hidden="true"></span><span class="brand-sub">aerial</span></a>
       <nav class="nav-links" aria-label="Hlavní navigace">
-        <a href="#work">Práce</a>
+        <a href="#work">Ukázky</a>
+        <a href="#services">Služby</a>
         <a href="#process">Postup</a>
-        <a href="#gear">Technika</a>
         <a href="#pricing">Ceník</a>
         <a href="#faq">FAQ</a>
       </nav>
@@ -39,90 +40,159 @@
 
   <main id="top">
 
-    <!-- 02 Hero -->
+    <!-- 02 Hero: data-vimeo = ID videa, které běží na pozadí (bez zvuku, ve smyčce) -->
     <section class="hero">
-      <div class="hero-media">
-        <!-- Showreel: vlož MP4 do src, nebo HLS (.m3u8) do data-hls -->
-        <video id="hero-video" muted loop playsinline autoplay preload="metadata" data-hls=""></video>
-      </div>
+      <div class="hero-media" id="hero-media" data-vimeo="1247409105"></div>
       <div class="hero-overlay"></div>
       <canvas class="hero-dust" id="dust" aria-hidden="true"></canvas>
       <div class="container hero-content">
-        <p class="eyebrow eyebrow-light reveal">AERIAL · FOTO · VIDEO · 2026</p>
+        <p class="eyebrow eyebrow-light reveal">DRON · FPV · KAMERA · OLOMOUC</p>
         <h1 class="hero-title reveal">
-          Svět vypadá jinak,<br>
-          <em>když se podíváte shora.</em>
+          Ukažte celou nemovitost.<br>
+          <em>Zvenku, zevnitř i shora.</em>
         </h1>
-        <p class="hero-sub reveal">Letecká videa a fotografie v 4K. Reality, eventy, firmy, krajina.</p>
+        <p class="hero-sub reveal">Video a fotografie pro realitní makléře, developery a firmy. Dron, FPV průlety interiérem, kamera a AI vizualizace budoucí podoby domu.</p>
         <div class="hero-cta reveal">
-          <a href="#work" class="btn btn-lime">Prohlédnout práci →</a>
-          <a href="#process" class="btn btn-ghost">Jak spolupracujeme</a>
+          <a href="#work" class="btn btn-lime">Ukázky práce →</a>
+          <a href="#contact" class="btn btn-ghost">Poptat natáčení</a>
         </div>
       </div>
-      <a href="#work" class="scroll-hint" aria-label="Posunout na portfolio"><span></span></a>
+      <a href="#for" class="scroll-hint" aria-label="Posunout dál"><span></span></a>
     </section>
 
-    <!-- 03 Bento -->
-    <section class="section" id="work">
+    <!-- 03 Pro koho -->
+    <section class="section" id="for">
       <div class="container">
         <div class="section-head reveal">
-          <p class="eyebrow">01 — Portfolio</p>
-          <h2 class="h1">Vybrané <em>lety</em></h2>
+          <p class="eyebrow">01 — Pro koho</p>
+          <h2 class="h1">Pro koho <em>točím</em></h2>
         </div>
-        <div class="bento">
-          <article class="card card-featured reveal">
-            <div class="thumb" style="--g: linear-gradient(135deg,#1d3b2a,#5b7f3a 45%,#c9b458)"></div>
-            <div class="card-body">
-              <span class="tag tag-lime">Showreel</span>
-              <h3>Showreel 2026</h3>
-              <p>Výběr toho nejlepšího za poslední sezónu.</p>
-            </div>
-          </article>
-          <article class="card reveal">
-            <div class="thumb" style="--g: linear-gradient(160deg,#0b2233,#1f5f7a 55%,#9fd3d9)"></div>
-            <div class="card-body"><span class="tag">Video</span><h3>Pobřeží</h3><p>Krajina, pomalé průlety nad vodou.</p></div>
-          </article>
-          <article class="card reveal">
-            <div class="thumb" style="--g: linear-gradient(200deg,#2b2b2b,#6d6a64 50%,#d8cfc0)"></div>
-            <div class="card-body"><span class="tag">Foto</span><h3>Rodinný dům</h3><p>Realitní fotografie pozemku a okolí.</p></div>
-          </article>
-          <article class="card reveal">
-            <div class="thumb" style="--g: linear-gradient(180deg,#0e0f1c,#2e2a57 50%,#e08a4b)"></div>
-            <div class="card-body"><span class="tag">Video</span><h3>Město v noci</h3><p>Hyperlapse nad centrem.</p></div>
-          </article>
-          <article class="card reveal">
-            <div class="thumb" style="--g: linear-gradient(120deg,#3a2a14,#a0763a 50%,#f0d9a0)"></div>
-            <div class="card-body"><span class="tag">Foto</span><h3>Pole v létě</h3><p>Geometrie krajiny kolmo shora.</p></div>
-          </article>
-          <article class="card reveal">
-            <div class="thumb" style="--g: linear-gradient(150deg,#1a1a1a,#4b5a4a 55%,#b6c2a8)"></div>
-            <div class="card-body"><span class="tag">Video</span><h3>Svatba</h3><p>Letecké záběry místa obřadu.</p></div>
-          </article>
-          <article class="card reveal">
-            <div class="thumb" style="--g: linear-gradient(170deg,#1c2430,#56657a 50%,#e6e9ee)"></div>
-            <div class="card-body"><span class="tag">Video</span><h3>Hory v inverzi</h3><p>Východ slunce nad mlhou.</p></div>
-          </article>
-          <article class="card reveal">
-            <div class="thumb" style="--g: linear-gradient(140deg,#20262b,#3f5b6e 50%,#c7a27a)"></div>
-            <div class="card-body"><span class="tag">Foto + video</span><h3>Firemní areál</h3><p>Prezentace provozu a budov.</p></div>
-          </article>
+        <div class="audience">
+          <div class="audience-card reveal">
+            <p class="eyebrow">Realitní makléři</p>
+            <h3 class="h3">Inzerát, který ukáže víc než fasádu</h3>
+            <p>Ze země je vidět dům. Ze vzduchu i pozemek, sousedství, výhled a cesta do centra. Průlet interiérem pak ukáže dispozici tak, jak ji fotky neukážou.</p>
+            <ul>
+              <li>Fotky exteriéru i interiéru pro realitní portály</li>
+              <li>Video 30–60 s pro inzerát a web</li>
+              <li>Vertikální verze 9:16 pro Reels a TikTok</li>
+              <li>Dodání do 14 dnů od natáčení</li>
+            </ul>
+          </div>
+          <div class="audience-card reveal">
+            <p class="eyebrow">Firmy a developeři</p>
+            <h3 class="h3">Projekt, který je vidět dřív, než stojí</h3>
+            <p>Záběry areálu a stavby pro web, nábor nebo prezentaci investorům. U projektů před realizací vložím do reálných záběrů vizualizaci podle architektonického návrhu.</p>
+            <ul>
+              <li>AI vizualizace budoucí podoby v reálném okolí</li>
+              <li>Prezentace areálu a budov</li>
+              <li>Dokumentace průběhu výstavby</li>
+              <li>Licence pro komerční použití</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- 04 How it works -->
+    <!-- 04 Ukázky: href = video na Vimeu, JS ho otevře v přehrávači na stránce -->
+    <section class="section section-alt" id="work">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">02 — Ukázky</p>
+          <h2 class="h1">Ukázky <em>práce</em></h2>
+        </div>
+        <div class="bento">
+          <a class="card card-featured reveal" href="https://vimeo.com/1241649222" data-vimeo="1241649222">
+            <div class="thumb"><img src="media/thumbs/samotisky.jpg" alt="" width="1600" height="900"><span class="play" aria-hidden="true"></span></div>
+            <div class="card-body">
+              <span class="tag tag-lime">AI vizualizace</span>
+              <h3>Samotišky — dům po rekonstrukci</h3>
+              <p>Do reálných záběrů z dronu je vložená podoba domu podle architektonického návrhu rekonstrukce.</p>
+            </div>
+          </a>
+          <a class="card reveal" href="https://vimeo.com/1241656035" data-vimeo="1241656035">
+            <div class="thumb"><img src="media/thumbs/stranske.jpg" alt="" width="960" height="540" loading="lazy"><span class="play" aria-hidden="true"></span></div>
+            <div class="card-body"><span class="tag">FPV · interiér</span><h3>Stránské</h3><p>Průlet dronem interiéry domu.</p></div>
+          </a>
+          <a class="card reveal" href="https://vimeo.com/1241661236" data-vimeo="1241661236">
+            <div class="thumb"><img src="media/thumbs/chomoutov.jpg" alt="" width="960" height="540" loading="lazy"><span class="play" aria-hidden="true"></span></div>
+            <div class="card-body"><span class="tag">Reality · video</span><h3>Chomoutov</h3><p>Energeticky úsporný dům.</p></div>
+          </a>
+          <a class="card reveal" href="https://vimeo.com/1241658109" data-vimeo="1241658109">
+            <div class="thumb"><img src="media/thumbs/senetarov.jpg" alt="" width="960" height="540" loading="lazy"><span class="play" aria-hidden="true"></span></div>
+            <div class="card-body"><span class="tag">Reality · video</span><h3>Senetářov</h3><p>Dům s vnitřním dvorem.</p></div>
+          </a>
+          <a class="card reveal" href="https://vimeo.com/1241655473" data-vimeo="1241655473">
+            <div class="thumb"><img src="media/thumbs/vila-dlouha.jpg" alt="" width="960" height="540" loading="lazy"><span class="play" aria-hidden="true"></span></div>
+            <div class="card-body"><span class="tag">Reality · video</span><h3>Vila Dlouhá</h3><p>Historická vila se zahradou.</p></div>
+          </a>
+          <a class="card reveal" href="https://vimeo.com/1241453159" data-vimeo="1241453159">
+            <div class="thumb"><img src="media/thumbs/velka-bystrice.jpg" alt="" width="960" height="540" loading="lazy"><span class="play" aria-hidden="true"></span></div>
+            <div class="card-body"><span class="tag">Reality · video</span><h3>Velká Bystřice</h3><p>Řadový dům na prodej.</p></div>
+          </a>
+          <a class="card reveal" href="https://vimeo.com/1247406148" data-vimeo="1247406148">
+            <div class="thumb"><img src="media/thumbs/hotel-dansko.jpg" alt="" width="960" height="540" loading="lazy"><span class="play" aria-hidden="true"></span></div>
+            <div class="card-body"><span class="tag">Firmy · hotel</span><h3>Hotel, Dánsko</h3><p>Natáčení hotelu v Dánsku.</p></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 Služby -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">03 — Služby</p>
+          <h2 class="h1">Co pro vás <em>natočím</em></h2>
+        </div>
+        <div class="services">
+          <div class="service reveal">
+            <span class="mono">01</span>
+            <h3>Video a foto z dronu</h3>
+            <p>Dům, pozemek a okolí z výšky. Kupující vidí polohu, příjezd, sousedství i výhled, tedy to, co se z fotek ze země nedozví.</p>
+          </div>
+          <div class="service reveal">
+            <span class="mono">02</span>
+            <h3>FPV průlet interiérem</h3>
+            <p>Malý dron DJI Avata 360 proletí domem v jednom plynulém záběru, z ulice přes vstup až do obýváku. Divák pochopí dispozici během pár sekund.</p>
+          </div>
+          <div class="service reveal">
+            <span class="mono">03</span>
+            <h3>Video kamerou Sony FX3</h3>
+            <p>Záběry ze země a z interiéru na filmovou kameru. Detaily, materiály a atmosféra, které dron nezachytí.</p>
+          </div>
+          <div class="service reveal">
+            <span class="mono">04</span>
+            <h3>Foto interiéru</h3>
+            <p>Upravené fotografie místností pro realitní portály, web i tištěné materiály.</p>
+          </div>
+          <div class="service reveal">
+            <span class="mono">05</span>
+            <h3>Virtuální prohlídka</h3>
+            <p>Zájemce si nemovitost projde sám z počítače nebo telefonu. Na osobní prohlídku pak přijdou ti, kdo to myslí vážně.</p>
+          </div>
+          <div class="service service-featured reveal">
+            <span class="mono">06</span>
+            <h3>AI vizualizace v reálných záběrech</h3>
+            <p>Do záběrů z dronu vložím podobu domu po rekonstrukci nebo novostavby podle architektonického návrhu. Hodí se pro pozemky, domy k rekonstrukci a developerské projekty před zahájením stavby.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 Postup -->
     <section class="section section-alt" id="process">
       <div class="container">
         <div class="section-head reveal">
-          <p class="eyebrow">02 — Postup</p>
-          <h2 class="h1">Od nápadu <em>k záběru</em></h2>
+          <p class="eyebrow">04 — Postup</p>
+          <h2 class="h1">Od poptávky <em>k hotovým záběrům</em></h2>
         </div>
         <div class="steps">
           <div class="step">
             <div class="step-text reveal">
               <span class="step-num">01</span>
-              <h3 class="h2">Konzultace a plán letu</h3>
-              <p>Probereme, co má výsledek ukázat. Prověřím letové zóny, povolení a počasí a naplánuji trasu i denní dobu kvůli světlu.</p>
+              <h3 class="h2">Poptávka a plán</h3>
+              <p>Pošlete adresu, termín a co má výsledek ukázat. Prověřím letovou zónu a případná povolení a natáčení naplánuji na denní dobu s nejlepším světlem.</p>
             </div>
             <div class="step-img reveal" style="--g: linear-gradient(135deg,#dfe7d6,#9fb58a)"></div>
           </div>
@@ -130,15 +200,15 @@
             <div class="step-text reveal">
               <span class="step-num">02</span>
               <h3 class="h2">Natáčení</h3>
-              <p>Video v 4K s plynulými průlety a fotky v RAW. Na místě zvládnu i kombinaci s pozemními záběry.</p>
+              <p>Exteriér z dronu, průlet interiérem, záběry kamerou a fotky. Většinou vše během jedné návštěvy. Majitel u toho být nemusí, stačí, když o termínu ví.</p>
             </div>
             <div class="step-img reveal" style="--g: linear-gradient(135deg,#d6e1ea,#7f9bb3)"></div>
           </div>
           <div class="step">
             <div class="step-text reveal">
               <span class="step-num">03</span>
-              <h3 class="h2">Postprodukce</h3>
-              <p>Střih, color grading v DaVinci Resolve a úprava fotek. Výstupy připravím pro web, sociální sítě i velkoformátový tisk.</p>
+              <h3 class="h2">Postprodukce a předání</h3>
+              <p>Střih na hudbu, color grading v DaVinci Resolve, titulky a úprava fotek. Do 14 dnů od natáčení dostanete odkaz ke stažení s verzemi pro portál, web i sociální sítě.</p>
             </div>
             <div class="step-img reveal" style="--g: linear-gradient(135deg,#ece2d4,#c2a27d)"></div>
           </div>
@@ -146,105 +216,132 @@
       </div>
     </section>
 
-    <!-- 05 Gear (místo testimonial wall — doplnit reference až budou) -->
+    <!-- 07 Technika (místo referencí — reference doplnit, až budou) -->
     <section class="section" id="gear">
       <div class="container">
         <div class="section-head reveal">
-          <p class="eyebrow">03 — Technika</p>
-          <h2 class="h1">S čím <em>létám</em></h2>
+          <p class="eyebrow">05 — Technika</p>
+          <h2 class="h1">S čím <em>pracuji</em></h2>
         </div>
         <div class="gear">
-          <div class="gear-item reveal"><span class="mono">DRON</span><strong>[doplnit model]</strong><p>Hlavní dron pro video a foto.</p></div>
-          <div class="gear-item reveal"><span class="mono">VIDEO</span><strong>4K · 10-bit</strong><p>Plochý profil pro color grading.</p></div>
-          <div class="gear-item reveal"><span class="mono">FOTO</span><strong>RAW · panoramata</strong><p>Včetně sférických 360° panoramat.</p></div>
-          <div class="gear-item reveal"><span class="mono">OPRÁVNĚNÍ</span><strong>[doplnit]</strong><p>Registrace provozovatele a pilotní zkouška.</p></div>
+          <div class="gear-item reveal"><span class="mono">DRON</span><strong>DJI Mavic Air 2</strong><p>Letecké video a fotografie exteriéru.</p></div>
+          <div class="gear-item reveal"><span class="mono">FPV DRON</span><strong>DJI Avata 360</strong><p>Průlety interiérem a dynamické záběry zblízka.</p></div>
+          <div class="gear-item reveal"><span class="mono">KAMERA</span><strong>Sony FX3</strong><p>Full-frame kamera pro záběry ze země a z interiéru.</p></div>
+          <div class="gear-item reveal"><span class="mono">POSTPRODUKCE</span><strong>DaVinci Resolve</strong><p>Střih, color grading a výstupy ve 4K.</p></div>
+          <div class="gear-item reveal"><span class="mono">OPRÁVNĚNÍ</span><strong>A1/A3 + A2</strong><p>Registrovaný pilot v otevřené kategorii.</p></div>
         </div>
       </div>
     </section>
 
-    <!-- 06 Pricing -->
+    <!-- 08 Ceník -->
     <section class="section section-alt" id="pricing">
       <div class="container">
         <div class="section-head reveal">
-          <p class="eyebrow">04 — Ceník</p>
+          <p class="eyebrow">06 — Ceník</p>
           <h2 class="h1">Jednoduché <em>balíčky</em></h2>
         </div>
         <div class="pricing">
           <div class="price-card reveal">
-            <p class="eyebrow">Foto</p>
-            <h3 class="h3">Letecké foto</h3>
-            <p class="price">od [cena] Kč</p>
+            <p class="eyebrow">Základ</p>
+            <h3 class="h3">Foto z dronu</h3>
+            <p class="price">od 4 900 Kč</p>
             <ul>
-              <li class="yes">10 upravených fotografií</li>
-              <li class="yes">Web + tiskové rozlišení</li>
-              <li class="yes">Dodání do 3 dnů</li>
+              <li class="yes">Sada upravených fotek z dronu</li>
+              <li class="yes">Formát pro portály i tisk</li>
+              <li class="yes">Použití k inzerci v ceně</li>
               <li class="no">Video</li>
             </ul>
             <a href="#contact" class="btn btn-ghost-dark">Poptat</a>
           </div>
           <div class="price-card price-featured reveal">
             <p class="eyebrow">Nejčastější</p>
-            <h3 class="h3">Foto + video</h3>
-            <p class="price">od [cena] Kč</p>
+            <h3 class="h3">Dron foto + video</h3>
+            <p class="price">od 12 000 Kč</p>
             <ul>
-              <li class="yes">20 upravených fotografií</li>
-              <li class="yes">Sestřih 60–90 s v 4K</li>
-              <li class="yes">Verze pro sociální sítě 9:16</li>
+              <li class="yes">Sada upravených fotek z dronu</li>
+              <li class="yes">Video 30–60 s ve 4K s hudbou a titulky</li>
+              <li class="yes">Verze 9:16 pro sociální sítě</li>
               <li class="yes">Color grading</li>
             </ul>
             <a href="#contact" class="btn btn-lime">Poptat</a>
           </div>
           <div class="price-card reveal">
-            <p class="eyebrow">Na míru</p>
-            <h3 class="h3">Projekt</h3>
-            <p class="price">individuálně</p>
+            <p class="eyebrow">Kompletní prezentace</p>
+            <h3 class="h3">Exteriér + interiér</h3>
+            <p class="price">od 24 000 Kč</p>
             <ul>
-              <li class="yes">Vícedenní natáčení</li>
-              <li class="yes">Kombinace s pozemní kamerou</li>
-              <li class="yes">Surová data (RAW, LOG)</li>
-              <li class="yes">Licence pro reklamu</li>
+              <li class="yes">Vše z balíčku Dron foto + video</li>
+              <li class="yes">FPV průlet interiérem</li>
+              <li class="yes">Záběry kamerou Sony FX3</li>
+              <li class="yes">Foto interiéru</li>
             </ul>
-            <a href="#contact" class="btn btn-ghost-dark">Domluvit se</a>
+            <a href="#contact" class="btn btn-ghost-dark">Poptat</a>
           </div>
         </div>
-        <p class="price-note mono">Ceny jsou bez cestovného mimo Olomouc. Finální cenu potvrdím po konzultaci.</p>
+        <div class="extras reveal">
+          <div>
+            <p class="eyebrow">K balíčkům lze přidat</p>
+            <ul>
+              <li>Virtuální prohlídka</li>
+              <li>AI vizualizace podle návrhu architekta</li>
+              <li>Expresní dodání</li>
+            </ul>
+          </div>
+          <div>
+            <p class="eyebrow">Firmy a developeři</p>
+            <p>Areály, výroba, opakované lety během výstavby, licence pro reklamu. Cenu připravím individuálně podle rozsahu.</p>
+          </div>
+        </div>
+        <p class="price-note mono">Dodání do 14 dnů od natáčení, podle náročnosti. Nejsem plátce DPH. Cestovné účtuji zvlášť, 8 Kč/km.</p>
       </div>
     </section>
 
-    <!-- 07 FAQ -->
+    <!-- 09 FAQ -->
     <section class="section" id="faq">
       <div class="container container-narrow">
         <div class="section-head reveal">
-          <p class="eyebrow">05 — FAQ</p>
+          <p class="eyebrow">07 — FAQ</p>
           <h2 class="h1">Časté <em>otázky</em></h2>
         </div>
         <div class="faq">
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">Musí být majitel u natáčení?</button>
+            <div class="faq-a"><div><p>Nemusí. Stačí, když o termínu ví a na pozemku nebude nic, co nechcete mít v záběru (auta, prádlo, lidé). Pro natáčení a focení interiéru je potřeba přístup do domu.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">Můžu fotky a video použít na realitních portálech?</button>
+            <div class="faq-a"><div><p>Ano. Výstupy dodám v rozlišení pro portály i pro tisk. Použití k inzerci dané nemovitosti je v ceně.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">Jak má být nemovitost připravená?</button>
+            <div class="faq-a"><div><p>Uklizeno, odklizené osobní věci, roztažené závěsy a rozsvíceno. Při průletu interiérem je vidět každá místnost, kterou dron proletí, takže se vyplatí otevřít dveře a nechat volné průchody.</p></div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">Co je AI vizualizace v reálných záběrech?</button>
+            <div class="faq-a"><div><p>Natočím současný stav z dronu a do záběrů vložím budoucí podobu domu podle architektonického návrhu. Kupující tak vidí výsledek rekonstrukce nebo novostavbu přímo na místě a v reálném okolí. Potřebuji k tomu podklady od architekta (vizualizace, výkresy nebo model).</p></div></div>
+          </div>
           <div class="faq-item">
             <button class="faq-q" aria-expanded="false">Můžete létat kdekoli?</button>
             <div class="faq-a"><div><p>Ne. Část území je v řízených nebo omezených zónách (letiště, města, chráněná území). Před každým letem zónu prověřím a případně zařídím povolení. Kvůli tomu je dobré poptávat s předstihem.</p></div></div>
           </div>
           <div class="faq-item">
             <button class="faq-q" aria-expanded="false">Co když bude špatné počasí?</button>
-            <div class="faq-a"><div><p>Při dešti, silném větru nebo mlze nelétám. Termín bez poplatku přesuneme na nejbližší vhodný den.</p></div></div>
+            <div class="faq-a"><div><p>Při dešti, silném větru nebo mlze venku nelétám. Termín bez poplatku přesuneme na nejbližší vhodný den.</p></div></div>
           </div>
           <div class="faq-item">
             <button class="faq-q" aria-expanded="false">Jak rychle dostanu výstupy?</button>
-            <div class="faq-a"><div><p>Fotky obvykle do 3 pracovních dnů, sestřih videa do 7 pracovních dnů. Expresní dodání je možné po domluvě.</p></div></div>
+            <div class="faq-a"><div><p>Do 14 dnů od natáčení, podle náročnosti. Pokud potřebujete výstupy dřív, napište to do poptávky a domluvíme se.</p></div></div>
           </div>
           <div class="faq-item">
             <button class="faq-q" aria-expanded="false">V jakém formátu výstupy dodáváte?</button>
-            <div class="faq-a"><div><p>Fotky jako JPEG ve vysokém rozlišení, video jako MP4 (H.264/H.265) v 4K. Na přání i surová data.</p></div></div>
+            <div class="faq-a"><div><p>Fotky jako JPEG ve vysokém rozlišení, video jako MP4 ve 4K a ve verzi 9:16 pro sociální sítě. Vše ke stažení přes odkaz.</p></div></div>
           </div>
           <div class="faq-item">
             <button class="faq-q" aria-expanded="false">Jezdíte i mimo Olomouc?</button>
-            <div class="faq-a"><div><p>Ano, po celé ČR i na Slovensko. Cestovné účtuji podle vzdálenosti.</p></div></div>
+            <div class="faq-a"><div><p>Ano, po celé ČR i na Slovensko. Cestovné účtuji zvlášť, 8 Kč/km.</p></div></div>
           </div>
           <div class="faq-item">
-            <button class="faq-q" aria-expanded="false">Máte pojištění?</button>
-            <div class="faq-a"><div><p>[doplnit — pojištění odpovědnosti provozovatele dronu]</p></div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-q" aria-expanded="false">Co soukromí lidí na záběrech?</button>
+            <button class="faq-q" aria-expanded="false">Co soukromí sousedů a lidí na záběrech?</button>
             <div class="faq-a"><div><p>Létám tak, aby záběry nezasahovaly do soukromí. Rozpoznatelné osoby ve výsledném materiálu nechávám jen se souhlasem, jinak je rozmažu nebo vystřihnu.</p></div></div>
           </div>
           <div class="faq-item">
@@ -255,48 +352,59 @@
       </div>
     </section>
 
-    <!-- 08 Final CTA -->
+    <!-- 10 Kontakt -->
     <section class="cta" id="contact">
       <div class="container cta-inner">
-        <p class="eyebrow reveal">06 — Kontakt</p>
+        <p class="eyebrow reveal">08 — Kontakt</p>
         <h2 class="display reveal">
-          Máte místo, které si zaslouží<br>
-          <em>pohled shora?</em>
+          Máte nemovitost nebo projekt,<br>
+          <em>který chcete ukázat?</em>
         </h2>
-        <a href="mailto:production@nmmnt.com?subject=Popt%C3%A1vka%20%E2%80%94%20dron" class="btn btn-lime btn-lg reveal">Napsat poptávku →</a>
+        <p class="cta-text reveal">Napište adresu, předpokládaný termín a o co máte zájem. Ozvu se s termínem a cenou.</p>
+        <div class="cta-actions reveal">
+          <a href="mailto:production@nmmnt.com?subject=Popt%C3%A1vka%20nat%C3%A1%C4%8Den%C3%AD&amp;body=Adresa%3A%0ATerm%C3%ADn%3A%0AO%20co%20m%C3%A1m%20z%C3%A1jem%20(dron%20%2F%20pr%C5%AFlet%20interi%C3%A9rem%20%2F%20foto%20interi%C3%A9ru%20%2F%20virtu%C3%A1ln%C3%AD%20prohl%C3%ADdka%20%2F%20AI%20vizualizace)%3A%0A" class="btn btn-lime btn-lg">Napsat poptávku →</a>
+          <a href="tel:+420702099678" class="btn btn-ghost-dark btn-lg">702 099 678</a>
+        </div>
       </div>
       <div class="marquee" aria-hidden="true">
         <div class="marquee-track">
-          <span>AERIAL FILM · FOTO Z VÝŠKY · 4K · COLOR GRADING · AERIAL FILM · FOTO Z VÝŠKY · 4K · COLOR GRADING · </span>
-          <span>AERIAL FILM · FOTO Z VÝŠKY · 4K · COLOR GRADING · AERIAL FILM · FOTO Z VÝŠKY · 4K · COLOR GRADING · </span>
+          <span>DRON · FPV PRŮLETY · SONY FX3 · FOTO INTERIÉRU · VIRTUÁLNÍ PROHLÍDKY · AI VIZUALIZACE · DRON · FPV PRŮLETY · SONY FX3 · FOTO INTERIÉRU · VIRTUÁLNÍ PROHLÍDKY · AI VIZUALIZACE · </span>
+          <span>DRON · FPV PRŮLETY · SONY FX3 · FOTO INTERIÉRU · VIRTUÁLNÍ PROHLÍDKY · AI VIZUALIZACE · DRON · FPV PRŮLETY · SONY FX3 · FOTO INTERIÉRU · VIRTUÁLNÍ PROHLÍDKY · AI VIZUALIZACE · </span>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- 09 Footer -->
+  <!-- 11 Footer -->
   <footer class="footer">
     <div class="container footer-grid">
       <div>
         <p class="footer-brand"><img src="assets/logo-black.png" alt="rm — Robin Michenka" width="943" height="450" loading="lazy"></p>
-        <p class="muted">Dronová videa a fotografie.<br>Olomouc · ČR · SK</p>
+        <p class="muted">Video a foto nemovitostí pro reality a firmy.<br>Olomouc · ČR · SK</p>
       </div>
       <div>
         <p class="eyebrow">Kontakt</p>
-        <a href="mailto:production@nmmnt.com">production@nmmnt.com</a>
+        Robin Michenka<br>
+        <a href="mailto:production@nmmnt.com">production@nmmnt.com</a><br>
+        <a href="tel:+420702099678">702 099 678</a>
       </div>
       <div>
         <p class="eyebrow">Jinde</p>
         <a href="https://nmmnt.com">nmmnt.com</a><br>
-        <a href="https://atelier55.nmmnt.com">Ateliér55</a><br>
-        <a href="#">Instagram [doplnit]</a>
+        <a href="https://atelier55.nmmnt.com">Ateliér55</a>
       </div>
     </div>
     <div class="container footer-bottom mono">© 2026 Robin Michenka</div>
   </footer>
 
+  <!-- Přehrávač videa -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Přehrávač videa" hidden>
+    <button class="lightbox-close" type="button" aria-label="Zavřít video">×</button>
+    <div class="lightbox-frame"></div>
+  </div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-  <script src="js/main.js" defer></script>
+  <script src="js/main.js?v=3" defer></script>
 </body>
 </html>

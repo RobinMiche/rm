@@ -21,21 +21,66 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  // Hero video: MP4 v src, nebo HLS v data-hls
-  const video = document.getElementById('hero-video');
-  const hls = video.dataset.hls;
-  if (hls) {
-    if (video.canPlayType('application/vnd.apple.mpegurl')) {
-      video.src = hls;
-    } else {
-      const s = document.createElement('script');
-      s.src = 'https://cdn.jsdelivr.net/npm/hls.js@1.5.15/dist/hls.min.js';
-      s.onload = () => { if (window.Hls && Hls.isSupported()) { const h = new Hls(); h.loadSource(hls); h.attachMedia(video); } };
-      document.head.appendChild(s);
-    }
+  // Hero: Vimeo na pozadí. Odkryje se, až se video skutečně přehrává (jinak zůstane přechod).
+  const heroMedia = document.getElementById('hero-media');
+  const heroId = heroMedia && heroMedia.dataset.vimeo;
+  if (heroId && !reduced) {
+    const startHero = () => {
+      const f = document.createElement('iframe');
+      f.src = 'https://player.vimeo.com/video/' + heroId + '?background=1&muted=1&autoplay=1&loop=1&dnt=1';
+      f.allow = 'autoplay; fullscreen';
+      f.setAttribute('tabindex', '-1');
+      f.setAttribute('aria-hidden', 'true');
+      f.title = 'Video na pozadí';
+      const post = (msg) => f.contentWindow && f.contentWindow.postMessage(JSON.stringify(msg), 'https://player.vimeo.com');
+      const onMsg = (e) => {
+        if (e.origin !== 'https://player.vimeo.com' || e.source !== f.contentWindow) return;
+        let d = e.data;
+        try { if (typeof d === 'string') d = JSON.parse(d); } catch (err) { return; }
+        if (d.event === 'ready') post({ method: 'addEventListener', value: 'playProgress' });
+        if (d.event === 'playProgress') {
+          heroMedia.classList.add('has-video');
+          window.removeEventListener('message', onMsg);
+        }
+      };
+      window.addEventListener('message', onMsg);
+      heroMedia.appendChild(f);
+    };
+    setTimeout(startHero, loaderMs);
   }
-  if (hls || video.getAttribute('src')) {
-    video.addEventListener('playing', () => video.parentElement.classList.add('has-video'), { once: true });
+
+  // Ukázky: klik na kartu otevře Vimeo v přehrávači na stránce
+  const lightbox = document.getElementById('lightbox');
+  if (lightbox) {
+    const frame = lightbox.querySelector('.lightbox-frame');
+    const closeBtn = lightbox.querySelector('.lightbox-close');
+    let lastFocus = null;
+    const close = () => {
+      if (lightbox.hidden) return;
+      lightbox.hidden = true;
+      frame.innerHTML = '';
+      document.body.classList.remove('lightbox-open');
+      if (lastFocus) lastFocus.focus();
+    };
+    document.querySelectorAll('.card[data-vimeo]').forEach((card) => {
+      card.addEventListener('click', (e) => {
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+        e.preventDefault();
+        lastFocus = card;
+        const f = document.createElement('iframe');
+        f.src = 'https://player.vimeo.com/video/' + card.dataset.vimeo + '?autoplay=1&title=0&byline=0&portrait=0&dnt=1';
+        f.allow = 'autoplay; fullscreen; picture-in-picture';
+        f.allowFullscreen = true;
+        f.title = card.querySelector('h3').textContent;
+        frame.appendChild(f);
+        lightbox.hidden = false;
+        document.body.classList.add('lightbox-open');
+        closeBtn.focus();
+      });
+    });
+    closeBtn.addEventListener('click', close);
+    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) close(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
   }
 
   // FAQ
