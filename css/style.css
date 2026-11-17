@@ -45,7 +45,7 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; }
   color: var(--text-2);
   margin-bottom: 20px;
 }
-.eyebrow-light { color: rgba(255, 255, 255, 0.72); }
+.eyebrow-light { color: rgba(255, 255, 255, 0.92); }
 
 .display { font-size: clamp(48px, 7vw, 88px); line-height: 1.02; font-weight: 500; letter-spacing: -0.03em; }
 .h1 { font-size: clamp(36px, 5vw, 64px); line-height: 1.05; font-weight: 500; letter-spacing: -0.03em; }
@@ -140,11 +140,16 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; }
 }
 .hero-media.has-video::before { animation: none; }
 @keyframes drift { from { transform: scale(1) translate(0, 0); } to { transform: scale(1.12) translate(-3%, 2%); } }
-.hero-overlay { position: absolute; inset: 0; background: rgba(0, 0, 0, 0.58); }
-.hero-dust { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.hero-overlay {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 60% 45% at 50% 50%, rgba(0, 0, 0, 0.4), transparent 75%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.12) 30%, rgba(0, 0, 0, 0.12) 70%, rgba(0, 0, 0, 0.3) 100%);
+}
+.hero-title, .hero-sub, .hero .eyebrow { text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35); }
 .hero-content { position: relative; text-align: center; width: 100%; }
 .hero-title { font-size: clamp(44px, 7vw, 96px); line-height: 1.02; font-weight: 500; letter-spacing: -0.035em; }
-.hero-sub { margin: 28px auto 0; max-width: 520px; font-size: 18px; color: rgba(255, 255, 255, 0.78); }
+.hero-sub { margin: 28px auto 0; max-width: 520px; font-size: 18px; color: rgba(255, 255, 255, 0.92); }
 .hero-cta { margin-top: 40px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 .scroll-hint {
   position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);

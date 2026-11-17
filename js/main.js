@@ -92,44 +92,6 @@
     });
   });
 
-  // Prach v hero
-  const canvas = document.getElementById('dust');
-  if (canvas && !reduced) {
-    const ctx = canvas.getContext('2d');
-    let w, h, particles;
-    const resize = () => {
-      const dpr = Math.min(window.devicePixelRatio || 1, 2);
-      w = canvas.offsetWidth; h = canvas.offsetHeight;
-      canvas.width = w * dpr; canvas.height = h * dpr;
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      const n = isMobile ? 30 : 70;
-      particles = Array.from({ length: n }, () => ({
-        x: Math.random() * w, y: Math.random() * h,
-        r: Math.random() * 1.4 + 0.3,
-        vx: (Math.random() - 0.5) * 0.15, vy: -Math.random() * 0.25 - 0.05,
-        a: Math.random() * 0.5 + 0.15,
-      }));
-    };
-    resize();
-    window.addEventListener('resize', resize);
-    let visible = true;
-    new IntersectionObserver(([e]) => { visible = e.isIntersecting; }).observe(canvas);
-    const tick = () => {
-      if (visible) {
-        ctx.clearRect(0, 0, w, h);
-        for (const p of particles) {
-          p.x += p.vx; p.y += p.vy;
-          if (p.y < -5) { p.y = h + 5; p.x = Math.random() * w; }
-          if (p.x < -5) p.x = w + 5; else if (p.x > w + 5) p.x = -5;
-          ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(255,255,255,${p.a})`; ctx.fill();
-        }
-      }
-      requestAnimationFrame(tick);
-    };
-    tick();
-  }
-
   function startAnimations() {
     const items = document.querySelectorAll('.reveal');
     if (reduced || !window.gsap || !window.ScrollTrigger) {
